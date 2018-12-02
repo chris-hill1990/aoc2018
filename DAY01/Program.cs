@@ -11,13 +11,13 @@ namespace DAY01
         {
             Console.WriteLine("Hello World!");
             string[] input = File.ReadAllLines(@"/Users/chill/Documents/HomeWork/AdventOfCode/2018/DAY01/input.txt");
-            //string[] input = { "+7", "+7", "-2", "-7", "-4" };
             double sum = 0;
             List<double> sums = new List<double>
             {
                 sum
             };
             bool foundSame = false;
+
             while (!foundSame)
             {
                 foreach (string line in input)
@@ -30,21 +30,16 @@ namespace DAY01
                     }
                     else
                     {
-                        Console.WriteLine(sum);
                         foundSame = true;
                         break;
                     }
 
                 }
             }
+            Console.WriteLine("The repeating sum is: " + sum);
         }
 
-        public static bool SeenBefore(double check, List<double> list)
-        {
-            int distinct = list.Distinct().Count();
-            bool truth = list.Count == list.Distinct().Count();
-            return truth;
-        }
+        public static bool SeenBefore(double check, List<double> list) => list.Count == list.Distinct().Count();
 
     }
 }
