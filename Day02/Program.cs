@@ -33,8 +33,8 @@ namespace Day02
                     if (diffrences.Count() == 1)
                     {
                         Console.WriteLine("test");
+                        lineArray = lineArray.Where((source, index) => index != diffrences.First()).ToArray();
                         List<char> Char = lineArray.ToList();
-                        Char.Remove(lineArray[diffrences.First()]);
                         Console.WriteLine(new string(Char.ToArray())); 
                     }
                 }
