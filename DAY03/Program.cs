@@ -16,12 +16,9 @@ namespace DAY03
             {
                 grid.AddClaim(data.cordinates, data.size, data);
             }
-            grid.CountOverlaping();
-            int test = grid.GetIntact();
-
-
+            Console.WriteLine("Part 1: " +  grid.CountOverlaping().ToString());
+            Console.WriteLine("Part 2: " + grid.GetIntact());
         }
-
 
         public static List<DataPoint> ParseFile(string uri)
         {
@@ -44,8 +41,6 @@ namespace DAY03
                 DataPoints.Add(data);
             }
             return DataPoints;
-
-
         }
     }
 
@@ -103,8 +98,6 @@ namespace DAY03
                 {
                     count++;
                 }
-
-
             }
             return count;
         }
@@ -119,8 +112,6 @@ namespace DAY03
                 {
                     return value.First().ID;
                 }
-
-
             }
             return 0;
         }
