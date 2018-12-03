@@ -17,7 +17,7 @@ namespace DAY03
                 grid.AddClaim(data.cordinates, data.size, data);
             }
             grid.CountOverlaping();
-            int test = grid.CountIntact();
+            int test = grid.GetIntact();
 
 
         }
@@ -109,7 +109,7 @@ namespace DAY03
             return count;
         }
 
-        public int CountIntact()
+        public int GetIntact()
         {
             foreach (Vector2 key in grid.Keys)
             {
